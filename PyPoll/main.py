@@ -27,7 +27,6 @@ for candidate, value in candidate_info.items():
     percent = round(percent, 3)
     candidate_info[candidate]['percentage'] = percent
 
-
 winner = [candidate for candidate, value in candidate_info.items() if value['votes'] == max(value['votes'] for value in candidate_info.values())]
 
 
@@ -35,16 +34,12 @@ print("Election Results")
 print("-------------------------")
 print(f"Total Votes: {total_votes}")
 print("-------------------------")
-
 for candidate in candidate_name:
     print(f"{candidate}: {candidate_info[candidate]['percentage']}% ({candidate_info[candidate]['votes']})")
-
 print("-------------------------")
 print(f"Winner: {winner[0]}")
 print("-------------------------")
     
-
-
 
 output_path = os.path.join("analysis", "output.txt")
 with open(output_path, "w", newline='') as datafile:

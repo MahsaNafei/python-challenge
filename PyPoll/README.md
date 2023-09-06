@@ -13,6 +13,7 @@ This script accomplishes the following tasks:
 1. **Data Retrieval**: It retrieves election data from the `election_data.csv` file located in the `Resources` directory.
 
 2. **Data Analysis**:
+
     -Counting Total Votes Cast:
     To determine the total number of votes cast in the election, the script initializes a variable total_votes to zero.
     It then iterates through each row in the CSV file, incrementing the total_votes count for each row. This count represents the total participation in the election.
@@ -21,8 +22,10 @@ This script accomplishes the following tasks:
     -Calculating Candidate Votes and Percentages:
 
     The script maintains two data structures:
-    1-candidate_name: A list to store the names of unique candidates.
-    2-candidate_info: A dictionary where each candidate's name serves as the key, and the associated value is another dictionary containing the number of votes and their percentage.
+
+        1-candidate_name: A list to store the names of unique candidates.
+
+        2-candidate_info: A dictionary where each candidate's name serves as the key, and the associated value is another dictionary containing the number of votes and their percentage.
 
     While iterating through the CSV file, it checks whether the candidate's name is already present in the candidate_info dictionary. If so, it increments the vote count for that candidate; otherwise, it adds the candidate's name to the candidate_name list and initializes their vote count to 1.
     After processing all the rows, the script calculates the percentage of votes each candidate received. It does this by dividing each candidate's vote count by the total_votes and then multiplying by 100 to get the percentage. The result is rounded to three decimal places for clarity.

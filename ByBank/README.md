@@ -13,6 +13,7 @@ This script accomplishes the following tasks:
 1. **Data Retrieval**: It retrieves financial data from the `budget_data.csv` file located in the `Resources` directory.
 
 2. **Data Analysis**:
+
     -Inside a loop, it calculates:
     totalmonths: Incremented for each row, representing the total number of months in the dataset.
     totalvalue: Accumulated by adding the profit/loss value from each row.
